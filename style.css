@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#game-table-flex{
+    display: flex;
+    position: relative;
+}
+
+#game-elements{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#game-functions{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+button{
+    padding: 1em 2em;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(138, 90, 7);
+}
+
+.current-player{
+    width: 100%;
+    height: 100vh;
+}
+
+.current-player-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.round-score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#player1-interface{
+    background: linear-gradient(90deg, rgb(196, 140, 29) 45%, rgb(138, 90, 7) 75%);
+}
+
+#player2-interface{
+    background: linear-gradient(90deg, rgb(53, 53, 53) 45%,  rgb(81, 81, 81) 75%);
+}
+
+.player-name{
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.player-score{
+    font-weight: 800;
+    font-size: 6em;
+}
+
+.round-score-int{
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#score-current-player-display{
+    font-weight: 800;
+    font-size: 5em;
+}
+
+.hidden{
+    display: none;
+}
