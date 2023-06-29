@@ -47,7 +47,7 @@ button:hover{
     background-color: rgb(138, 90, 7);
 }
 
-.current-player{
+#player1-interface, #player2-interface{
     width: 100%;
     height: 100vh;
 }
@@ -67,12 +67,12 @@ button:hover{
     font-size: 1.5em;
 }
 
-#player1-interface{
+.current-player{
     background: linear-gradient(90deg, rgb(196, 140, 29) 45%, rgb(138, 90, 7) 75%);
 }
 
-#player2-interface{
-    background: linear-gradient(90deg, rgb(53, 53, 53) 45%,  rgb(81, 81, 81) 75%);
+.inactive-player{
+    background: rgb(58, 56, 56);
 }
 
 .player-name{
@@ -90,11 +90,18 @@ button:hover{
     font-weight: 600;
 }
 
-#score-current-player-display{
+#dice{
     font-weight: 800;
     font-size: 5em;
+    box-shadow: 0 0 10px;
+    width: 100px;
+    text-align: center;
 }
 
 .hidden{
     display: none;
+}
+
+.winner{
+    background-color: green;
 }
