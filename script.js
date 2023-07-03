@@ -7,7 +7,6 @@ let scores;
 let scoreDuRound;
 let joueurActif;
 let partieEnCours;
-
 // Appelle de la fonction init.
 init();
 
@@ -42,13 +41,12 @@ garderLeScore.addEventListener('click', function(){
     if (partieEnCours){
         // On ajoute au score global du joueur actif l'addition de son score global + son score de tour.
         scores[joueurActif] += scoreDuRound;
-
         // Affiche le score global.
         document.getElementById('player' + joueurActif + '-score').textContent = scores[joueurActif];
         // Si le score global du joueur actif est supérieur ou égal à 100.
         if(scores[joueurActif] >= 100){
             // On change le nom du joueur actif par 'C'est gagné !';
-            document.getElementById('player' + joueurActif).textContent = 'C\est gagné !';
+            document.getElementById('player' + joueurActif).textContent = 'C\'est gagné !';
             // On fait disparaître le dé;
             document.getElementById('dice').style.display = 'none';
             // On ajoute la classe winner au joueur ayant gagné pour change sa couleur de fond;
@@ -62,7 +60,6 @@ garderLeScore.addEventListener('click', function(){
             // On passe au joueur suivant
             joueurSuivant();
         }
-
     }
 });
 

@@ -63,12 +63,38 @@
           <button id="hold-score">
             GARDER LE SCORE
           </button>
+          <button id="game-rules">
+            RÈGLES DU JEU
+          </button>
         </div>
       </div>
     </div>
+    <div id="game-rules-dice-game" class="hidden">
+      <div id="game-rules-dice-game-container">
+        <h2>Règles du jeu</h2>
+        <h3>Nombre de joueurs :</h3>
+        <p>Le jeu se joue à 2 joueurs.</p>
+        <h3>Objectifs :</h3>
+        <p>Le 1er joueur à atteindre ou dépasser un socre total de 100 remporte la partie.</p>
+        <h3>Déroulement du jeu :</h3>
+        <ul>
+          <li>Le joueur 1 commence la partie en lançant le dés.</li>
+          <li>À chaque tour, un joueur lance le dé en utilisant le bouton 'Lancer les dés'.</li>
+          <li>Si le dé affiche un résultat autre que 1, le joueur ajoute ce résultat à son score de tour. Il a alors 2 options :
+            <ol>
+              <li>Continuer à lancer le dé en utilisant le bouton 'Lancer les dés' pour accumuler davantage de points pour ce tour.</li>
+              <li>Cliquer sur le bouton 'Garder le score' pour ajouter son score de tour à son score global. La main passe alors au joueur suivant.</li>
+            </ol>
+          </li>
+          <li>Si le joueur obtient un 1 lors du lancer de dé, son score de tour retombe à 0 mais il conserve son score global. La main passe alors au joueur suivant.</li>
+          <li>Les joueurs continuent à tour de rôle jusqu'à ce que l'un d'eux atteigne ou dépasse un score total de 100.</li>
+        </ul>
+        <button id="close-rules">RETOURNER AU JEU</button>
+      </div>
+    </div>
   </main>
+  <script src="app.js"></script>
   <script src="script.js"></script>
-
 </body>
 
 </html>
