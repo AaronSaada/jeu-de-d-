@@ -35,6 +35,29 @@ lancerLesDes.addEventListener('click', function() {
     }
 });
 
+document.addEventListener('keydown', function(event) {
+    // Si la partie est en cours (Si partieEnCours == true) et que la touche enfoncée est la touche "Espace" (code 32).
+    if (partieEnCours && event.keyCode === 32) {
+        // On stock dans la variable nombreAleatoire un nombre aléatoire entre 1 et 6.
+        var nombreAleatoire = Math.ceil(Math.random() * 6);
+        // On remplace la source de l'image en fonction du chiffre aléatoire tiré.
+        des.src = 'images/image' + nombreAleatoire + '.png';
+        // On change le type de l'image en block.
+        des.style.display = 'block';
+        // Si le nombre aléatoire tiré n'est pas 1
+        if (nombreAleatoire !== 1) {
+            // Alors on ajoute au score du tour du joueur actif le chiffre tiré
+            scoreDuRound += nombreAleatoire;
+            // Dans la partie score du round on affiche ensuite l'addition précédente.
+            document.getElementById('round-score-int-' + joueurActif).textContent = scoreDuRound;
+        } else {
+            // On passe au joueur suivant.
+            joueurSuivant();
+        }
+    }
+  });
+
+
 // Fonction comportant un écouteur d'événement sur le bouton 'Garder le score';
 garderLeScore.addEventListener('click', function(){
     // Si la partie est en cours (Si partieEnCours == true).
@@ -44,7 +67,35 @@ garderLeScore.addEventListener('click', function(){
         // Affiche le score global.
         document.getElementById('player' + joueurActif + '-score').textContent = scores[joueurActif];
         // Si le score global du joueur actif est supérieur ou égal à 100.
-        if(scores[joueurActif] >= 150){
+        if(scores[joueurActif] >= 100){
+            // On change le nom du joueur actif par 'C'est gagné !';
+            document.getElementById('player' + joueurActif).textContent = 'C\'est gagné !';
+            // On fait disparaître le dé;
+            document.getElementById('dice').style.display = 'none';
+            // On ajoute la classe winner au joueur ayant gagné pour change sa couleur de fond;
+            document.getElementById('player' + joueurActif + '-interface').classList.add('winner');
+            // On lui retire la classe 'current-player' pour retirer ses propriétés;
+            document.getElementById('player' + joueurActif + '-interface').classList.toggle('current-player');
+            // On met fin à la partie.
+            partieEnCours = false;
+        // Si non
+        }else{
+            // On passe au joueur suivant
+            joueurSuivant();
+        }
+    }
+});
+
+// Fonction comportant un écouteur d'événement sur le bouton 'Garder le score';
+document.addEventListener('keydown', function(event){
+    // Si la partie est en cours (Si partieEnCours == true).
+    if (partieEnCours && event.keyCode === 13){
+        // On ajoute au score global du joueur actif l'addition de son score global + son score de tour.
+        scores[joueurActif] += scoreDuRound;
+        // Affiche le score global.
+        document.getElementById('player' + joueurActif + '-score').textContent = scores[joueurActif];
+        // Si le score global du joueur actif est supérieur ou égal à 100.
+        if(scores[joueurActif] >= 100){
             // On change le nom du joueur actif par 'C'est gagné !';
             document.getElementById('player' + joueurActif).textContent = 'C\'est gagné !';
             // On fait disparaître le dé;
