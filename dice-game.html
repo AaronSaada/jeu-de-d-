@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Intrigame - Jeu de dés</title>
+</head>
+
+<body id="dice-game">
+  <header>
+    <nav>
+      <ul>
+        <a href="index.html">
+          <li>Accueil</li>
+        </a>
+        <a href="games.html">
+          <li>Nos Minis-jeux</li>
+        </a>
+        <a href="contact.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="game-table">
+      <div id="game-table-flex">
+        <div id="player0-interface">
+          <div class="current-player-flex">
+            <p id="player0" class="player-name">Joueur 1</p>
+            <p id="player0-score" class="player-score">0</p>
+            <div class="round-score">
+              <p class="round-score-title">Score du round</p>
+              <p class="hidden">Dommage !</p>
+              <p class="round-score-int" id="round-score-int-0">0</p>
+            </div>
+          </div>
+        </div>
+        <div id="player1-interface">
+          <div class="current-player-flex">
+            <p id="player1" class="player-name">Joueur 2</p>
+            <p id="player1-score" class="player-score">0</p>
+            <div class="round-score">
+              <p class="round-score-title">Score du round</p>
+              <p class="hidden">Dommage !</p>
+              <p class="round-score-int" id="round-score-int-1">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="game-elements">
+        <button id="new-game">NOUVELLE PARTIE</button>
+        <img src="images/image1.png" alt="" id="dice">
+        <div id="game-functions">
+          <button id="roll-dice">
+            LANCER LES DÉS
+          </button>
+          <button id="hold-score">
+            GARDER LE SCORE
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
