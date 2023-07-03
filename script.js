@@ -7,9 +7,9 @@ let scores;
 let scoreDuRound;
 let joueurActif;
 let partieEnCours;
+
 // Appelle de la fonction init.
 init();
-
 
 // Fonction comportant un écouteur d'événement sur le bouton 'Lancer les dés';
 lancerLesDes.addEventListener('click', function() {
@@ -44,7 +44,7 @@ garderLeScore.addEventListener('click', function(){
         // Affiche le score global.
         document.getElementById('player' + joueurActif + '-score').textContent = scores[joueurActif];
         // Si le score global du joueur actif est supérieur ou égal à 100.
-        if(scores[joueurActif] >= 100){
+        if(scores[joueurActif] >= 150){
             // On change le nom du joueur actif par 'C'est gagné !';
             document.getElementById('player' + joueurActif).textContent = 'C\'est gagné !';
             // On fait disparaître le dé;
