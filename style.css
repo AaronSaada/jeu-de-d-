@@ -104,14 +104,61 @@ button:hover{
 
 /*                  */
 
+/*      PAGE NOS MINIS-JEUX        */
+
+#dice-game-section{
+    background: url('images/dice-background.webp');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+#tic-tac-toe-section{
+    background: url('images/tictactoe-background.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
 
 
-/*    Jeu de dés    */
+#coming-soon-section{
+    background: url('images/workinprogress.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+    color: white;
+}
+
+#coming-soon-section::before{
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    background-color: rgb(0, 0, 0);
+}
+
+.games-section-flex{
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*                                 */
+
+/*           Jeu de dés          */
 
 
 #game-table{
     background-color: rgb(20, 15, 12);
-    height: calc(100vh - 42px);
+    height: calc(100vh - 41px);
 
 }
 
@@ -227,56 +274,12 @@ button:hover{
     background-color: green;
 }
 
-/*              */
-
-/*      PAGE NOS MINIS-JEUX        */
-
-#dice-game-section{
-    background: url('dice-background.webp');
-    background-position: center;
-    background-size: cover;
-    color: white;
-}
-
-#tic-tac-toe-section{
-    background: url('tictactoe-background.jpg');
-    background-position: center;
-    background-size: cover;
-    color: white;
-}
-
-
-#coming-soon-section{
-    background: url('workinprogress.jpg');
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: -2;
-    color: white;
-}
-
-#coming-soon-section::before{
-    content: '';
-    inset: 0;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.5;
-    background-color: rgb(0, 0, 0);
-}
-
-.games-section-flex{
-    height: 100vh;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6em;
-    margin: 0 auto;
-    text-align: center;
-}
-
 /*                                 */
+
+/*         JEU DU MORPION          */
+
+
+/*                                  */
 
 /*  Media queries    */
 

@@ -172,3 +172,11 @@ function init() {
     document.getElementById('player0-interface').classList.remove('winner');
     document.getElementById('player1-interface').classList.remove('winner');
 }
+
+document.getElementById('game-rules').addEventListener('click', function(){
+    document.getElementById('game-rules-dice-game').style.display = 'block';
+});
+
+document.getElementById('close-rules').addEventListener('click', function(){
+    document.getElementById('game-rules-dice-game').style.display = 'none';
+});
