@@ -278,6 +278,50 @@ button:hover{
 
 /*         JEU DU MORPION          */
 
+#tictactoe-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 41px);
+    background: linear-gradient(90deg, rgb(151, 68, 0) 30%, rgb(184, 77, 0) 50%, rgb(255, 115, 0) 70%);
+    color: white;
+    text-shadow: 0 0 8px black;
+}
+
+.cell{
+    width: 100%;
+    height: 100%;
+    border: 4px solid black;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#cell-container{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 60vw;
+    height: 60vh;
+    margin: auto;
+}
+
+#tictactoe-game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.playerX{
+    background-color:rgb(255, 191, 0);
+}
+
+.playerO{
+    background-color: rgb(0, 234, 255);
+}
 
 /*                                  */
 
