@@ -51,6 +51,13 @@ button:hover{
 
 
 
+
+
+
+
+
+
+
 /*      Accueil     */
 
 #hero-banner{
@@ -96,6 +103,7 @@ button:hover{
     gap: 20px;
     max-width: 70%;
     margin-left: 10%;
+    transition: ease-in-out 0.5s;
 }
 
 #home #hero-banner-flex button{
@@ -103,6 +111,18 @@ button:hover{
 }
 
 /*                  */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*      PAGE NOS MINIS-JEUX        */
 
@@ -164,6 +184,18 @@ button:hover{
 }
 
 /*                                 */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*           Jeu de dés          */
 
@@ -254,6 +286,16 @@ button:hover{
 .player-name{
     font-weight: 700;
     font-size: 3em;
+    animation: 2s linear 1s infinite alternate zoomNom;
+}
+
+@keyframes zoomNom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
 }
 
 .player-score{
@@ -287,6 +329,17 @@ button:hover{
 }
 
 /*                                 */
+
+
+
+
+
+
+
+
+
+
+
 
 /*         JEU DU MORPION          */
 
@@ -336,6 +389,83 @@ button:hover{
 }
 
 /*                                  */
+
+
+
+
+
+
+
+
+
+
+
+
+/*              PAGE CONTACT          */
+
+#form-page-container{
+    width: 100vw;
+    height: calc(100vh - 41px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px black;
+    background: url('images/contact-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form-page-flex{
+    max-width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(153, 115, 115, 0.476);
+    padding: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+input[type='text']{
+    line-height: 2;
+    margin: 1em 0;
+    padding: 0.5em;
+    color: black;
+}
+
+textarea{
+    height: 200px;
+    padding: 0.5em;
+    margin: 1em 0 2em 0;
+    color: black;
+}
+
+input[type='submit']{
+    color: white;
+    background-color: rgb(255, 89, 0);
+    height: 40px;
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+/*                                  */
+
+
+
 
 /*  Media queries    */
 
