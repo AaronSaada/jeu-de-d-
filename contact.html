@@ -29,17 +29,24 @@
       <div id="form-page-flex">
         <h1>CONTACTEZ-NOUS !</h1>
         <p>Pour toutes questions concernant nos jeux, contactez-nous en remplissant le formulaire ci-dessous</p>
-        <form>
-          <input type="text" placeholder="Votre Nom">
-          <input type="text" placeholder="Votre Prénom">
-          <input type="text" placeholder="Votre Email">
-          <input type="text" placeholder="Sujet">
-          <textarea placeholder="Votre Nom"></textarea>
-          <input type="submit">
+        <form onsubmit="return validerLeFormulaire()">
+          <input type="text" placeholder="Votre Nom" id="nom" name="nom" required>
+          <span id="lastname-error" class="error-message"></span>
+
+          <input type="text" placeholder="Votre Prénom" id="prenom" name="prenom" required>
+          <span id="firstname-error" class="error-message"></span>
+
+          <input type="text" placeholder="Votre Email" id="email" name="email" required>
+          <span id="email-error" class="error-message"></span>
+
+          <input type="text" placeholder="Sujet" name="sujet" required>
+          <textarea placeholder="Votre Message" name="message" id="message" required></textarea>
+          <input type="submit" id="submit">
         </form>
       </div>
     </div>
   </main>
+  <script src="javascript/form.js"></script>
 </body>
 
 </html>

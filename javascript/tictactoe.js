@@ -74,10 +74,12 @@ function verifierVainqueur(){
     }else if(!options.includes("")){
         changementDuTexte.textContent = `Égalité !`;
         partieEnCours = false;
+
     }else{
         joueurSuivant();
     }
 }
+
 function nouvellePartie(){
     joueurActif = "X";
     options = ["", "", "", "", "", "", "", "", ""];
@@ -85,3 +87,12 @@ function nouvellePartie(){
     cellules.forEach(cellule => cellule.textContent = "");
     partieEnCours = true;
 }
+
+
+document.getElementById('game-rules-open-tictactoe').addEventListener('click', function(){
+    document.getElementById('game-rules-tictactoe').style.display = 'flex';
+});
+  
+document.getElementById('close-rules-tictactoe').addEventListener('click', function(){
+    document.getElementById('game-rules-tictactoe').style.display = 'none';
+});

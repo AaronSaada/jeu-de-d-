@@ -173,10 +173,10 @@ function init() {
     document.getElementById('player1-interface').classList.remove('winner');
 }
 
-document.getElementById('game-rules').addEventListener('click', function(){
-    document.getElementById('game-rules-dice-game').style.display = 'flex';
+document.getElementById('game-rules-open-dice').addEventListener('click', function(){
+    document.getElementById('game-rules-dice').style.display = 'flex';
 });
 
-document.getElementById('close-rules').addEventListener('click', function(){
-    document.getElementById('game-rules-dice-game').style.display = 'none';
+document.getElementById('close-rules-dice').addEventListener('click', function(){
+    document.getElementById('game-rules-dice').style.display = 'none';
 });

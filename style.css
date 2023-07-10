@@ -224,7 +224,7 @@ button:hover{
     height: 100%;
 }
 
-#game-rules-dice-game{
+#game-rules-dice{
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -238,7 +238,7 @@ button:hover{
     opacity: 0.9;
 }
 
-#game-rules-dice-game-container{
+#game-rules-dice-container{
     height: calc(100vh - 70px);
     max-width: 70%;
     display: flex;
@@ -247,9 +247,37 @@ button:hover{
     justify-content: space-around;
 }
 
-#game-rules-dice-game-container ol{
+#game-rules-dice-container ol{
     padding-left: 2em;
 }
+
+#game-rules-tictactoe{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 0.9;
+}
+
+#game-rules-tictactoe-container{
+    height: calc(100vh - 70px);
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#game-rules-tictactoe-container ol{
+    padding-left: 2em;
+}
+
 
 #hero-banner{
     height: calc(100vh - 41px );
@@ -286,16 +314,6 @@ button:hover{
 .player-name{
     font-weight: 700;
     font-size: 3em;
-    animation: 2s linear 1s infinite alternate zoomNom;
-}
-
-@keyframes zoomNom{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(1.5);
-    }
 }
 
 .player-score{
@@ -381,11 +399,11 @@ button:hover{
 }
 
 .playerX{
-    background-color:rgb(255, 191, 0);
+    color:rgb(255, 191, 0);
 }
 
 .playerO{
-    background-color: rgb(0, 234, 255);
+    color: rgb(0, 234, 255);
 }
 
 /*                                  */
@@ -425,6 +443,14 @@ button:hover{
     justify-content: center;
     background-color: rgba(153, 115, 115, 0.476);
     padding: 20px;
+}
+
+#form-page-flex p{
+    margin: 1.5em 0;
+}
+
+.error-message{
+    text-shadow: red 0 0 5px;
 }
 
 form{

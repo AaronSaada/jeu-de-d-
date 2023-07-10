@@ -1,1 +1,0 @@
-let titre = document.getElementById('hero-banner-flex');
